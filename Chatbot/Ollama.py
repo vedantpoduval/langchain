@@ -1,4 +1,4 @@
-from langchain_community.llms import Ollama
+from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
@@ -22,7 +22,8 @@ prompt = ChatPromptTemplate(
 st.title("Learning Langchain with OLLAMA")
 input = st.text_input("Enter your question")
 
-llm = Ollama(model = "llama2")
+llm = OllamaLLM(model = "llama2")
+
 output_parser = StrOutputParser()
 chain = prompt | llm | output_parser
 if input:
