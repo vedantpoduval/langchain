@@ -1,0 +1,21 @@
+ RAG Pipeline (Retrieval-Augmented Generation)
+
+RAG combines retrieval and generation to produce contextually relevant and factually grounded responses.
+
+---
+
+ Key Components
+1. Query Input: User’s prompt or question.
+2. Retriever: Fetches relevant documents from a knowledge base (e.g., FAISS, Pinecone).
+3. Knowledge Base: External repository of structured or unstructured information.
+4. Language Model: Generates responses based on retrieved context (e.g., GPT, Llama2).
+5. Output: Factual and context-aware responses.
+
+---
+
+ Workflow
+1. User query → Retriever fetches relevant documents.
+2. Retrieved documents are appended to the query.
+3. Language model generates a response using the enriched context.
+
+
